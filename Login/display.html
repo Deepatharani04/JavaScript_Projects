@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Page</title>
+    <style>
+        body{
+            text-align:center;
+        }
+        h1{
+            color:rgb(74, 123, 143);
+        }
+    </style>
+</head>
+<body>
+    <h1>Stored Data</h1>
+    <p id="displayEmail">Email:</p>
+    <p id="displayPswd">Password:</p>
+    <script>
+        function displayData(){
+            const email=localStorage.getItem('user Email');
+            const password=localStorage.getItem('user Password');
+            document.getElementById('displayEmail').textContent=`Email:${email}`;
+            document.getElementById('displayPswd').textContent=`Password:${password}`;
+        }
+        window.onload = displayData;
+    </script>
+</body>
+</html>

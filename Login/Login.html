@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Page</title>
+    <style>
+        body{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            background-color:#f0f8ff;;
+            display:flex;
+            padding-top:170px;
+            justify-content:center;
+        }
+        h1{
+            color:rgb(74, 123, 143);
+        }
+        .div1{
+            text-align:center;
+            background-color:white;
+            border-radius:8px;
+            width:400px;
+            height:300px;
+            box-shadow:0 0 10px rgba(107, 22, 62, 0.2);
+        }
+        form{
+            justify-content:left;
+        }
+        input{
+            padding:10px;
+            border:2px solid rgb(74, 123, 143);
+            border-radius: 3px;
+            margin-bottom:10px;
+            font-size:15px;
+        }
+        button{
+            background-color:rgb(74, 123, 143);
+            border:none;
+            border-radius:3px;
+            height:40px;
+            width:90px;
+            font-size:15px;
+        }
+        form label{
+            justify-content:left;
+        }
+        button:hover{
+            background-color:rgb(74, 123, 143);
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <h1>User Input</h1>
+        <form onsubmit="event.preventDefault();saveData();">
+            <label>Email Address:</label>
+            <input type="email" id="email" placeholder="Enter Your Email Address" required><br><br>
+            <label>Password:</label>
+            <input type="password" id="password" placeholder="Enter Your Password"><br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        function saveData(){
+            const email=document.getElementById('email').value;
+            const password=document.getElementById('password').value;
+            localStorage.setItem('user Email',email);
+            localStorage.setItem('user Password',password);
+            window.location.href = 'display.html';
+        }
+    </script>
+</body>
+</html>

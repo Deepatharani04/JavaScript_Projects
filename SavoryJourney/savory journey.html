@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savory Journey</title>
+    <link rel="stylesheet" href="./SavoryJourney.css">
+</head>
+<body>
+    
+    <div class="navbar">
+        <h1>Savory Journey</h1>
+    </div>
+    
+    <div class="container">
+        <div class="recipe-container">
+           <h2>Chicken Alfredo Pasta</h2>
+           <h4><i>Ingrediants: </i>broccoli, olive oil, garlic,  cheese, Salt and pepper</h4>
+           <p><i><b>Procedure:  </b></i>reheat oven to 425°F (220°C). Toss broccoli florets with olive oil, minced garlic, salt, and pepper. Spread on a baking sheet and roast for 20-25 minutes. Remove from oven, sprinkle with Parmesan cheese, and toss to coat. Serve warm</p>
+           <button onclick="deleterecipe(event)">Delete</button>
+        </div>
+    </div>
+    <div class="popup-overlay">
+    </div>
+    <div class="popup-box">
+        <h2>Add Recipe</h2>
+        <form>
+            <input type="text" placeholder="Recipe Name" id="recipe-title-input">
+            <input type="text" placeholder="Recipe Ingrediants" id="recipe-ingrediants-input">
+            <textarea placeholder="Recipe Procedure" id="recipe-procedure-input"></textarea>
+            <button id="add-recipe">ADD</button>
+            <button id="cancel-popup">CANCEL</button>
+        </form>
+    </div>
+    <button class="add-button" id="add-popup-button">+</button>
+    <script src="./SavoryJourney.js"></script>
+</body>
+</html>
